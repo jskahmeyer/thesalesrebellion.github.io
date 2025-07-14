@@ -1,6 +1,69 @@
 const stripe = Stripe("pk_live_76o7Q17lfv1eFl5I74ajlWi5003dMoTD0q");
+// const stripe = Stripe("pk_test_hOI2vzQX7QTuREiUkLmwqI1c00Rzh33WFH");
 const elements = stripe.elements();
 let checkout = '';
+
+const customFont = {
+  cssSrc: "https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;700&display=swap",
+  family: 'Kufam',
+};
+
+const elementsOptions = {
+  appearance: {
+    theme: 'stripe',
+    variables: {
+      fontFamily: 'Kufam, sans-serif',
+      borderRadius: '0px',
+      colorPrimary: '#F0F',
+    },
+    rules: {
+      '.Tab': {
+        borderColor: '#647488',
+        borderRadius: '0px',
+        boxShadow: 'none',
+        marginBottom: '4px',
+      },
+      '.Tab--selected, .Tab--selected:focus, .Tab--selected:hover': {
+        borderColor: '#f0f',
+        boxShadow: 'none',
+      },
+      '.TabIcon': {
+        color: '#647488',
+      },
+      '.TabIcon--selected': {
+        fill: '#000',
+      },
+      '.TabLabel--selected': {
+        color: '#000',
+      },
+      '.Label': {
+        color: '#647488',
+        fontSize: '1rem',
+        lineHeight: '125%',
+        fontWeight: 600,
+        letterSpacing: '-0.32px',
+        marginTop: '20px'
+      },
+      '.Input': {
+        borderRadius: 0,
+        borderColor: '#A0ABB9',
+        boxShadow: 'none',
+      },
+      '.Input:focus': {
+        borderColor: '#f0f',
+        boxShadow: 'none',
+      },
+      '.Input::placeholder': {
+        color: '#A0ABB9'
+      },
+      '.RedirectText': {
+        color: '#191D22',
+        paddingTop: '20px',
+      }
+    }
+  },
+  fonts: [customFont],
+};
 
 document.querySelectorAll('button[data-type="purchase"]').forEach(i => i.addEventListener('click', async e => {
   const price = e.target.getAttribute('data-product-price');
@@ -45,7 +108,7 @@ const createCheckoutSession = async (price) => {
 
   return stripe.initCheckout({
     fetchClientSecret: () => clientSecret,
-    elementsOptions: { appearance: { theme: 'stripe' }},
+    elementsOptions,
   });
 };
 
