@@ -6,34 +6,67 @@ permalink: /success/
 
 {%- include "header.liquid" -%}
 
-<section class="hero hero--{{ page_id }}">
+<style>
+    .hero {
+        background-image: url('/img/success/hero-bg.webp');
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+        padding: 235px 60px 236px;
 
-    <div class="hero__content hero__content--{{ page_id }}">
+        h1 {
+            max-width: 1200px;
+            margin: 0 auto 35px;
+            text-wrap: balance;
+            font-weight: 400;
+            font-size: 60px;
+        }
 
-        <div class="hero__container hero__container--page hero__container--{{ page_id }}">
+        p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 125%;
+            letter-spacing: -0.48px;
+            text-wrap: balance;
 
-            <div class="hero__content-wrapper hero__content-wrapper--{{ page_id }}">
+            a {
+                color: #66ffc8;
+                text-decoration: underline;
+            }
+        }
+    }
 
-                <h1 class="hero__heading hero__heading--page hero__heading--{{ page_id }} text-center">
-                    Thanks for joining the rebellion.
-                </h1>
-                <p class="text-center">
-                   We've emailed you a receipt. Need more help? <a href="mailto:info@thesalesrebellion.com">Email us</a> or give us a <a class="text-center" href="tel:6152199828">call</a>.
-                </p>
+    @media(max-width: 1200px) {
+        .hero {
+            padding: 200px 40px 200px;
 
-            </div>
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
 
-        </div>
+    @media(max-width: 768px) {
+        .hero {
+            padding: 150px 40px 150px;
+            background-position: center left;
 
-    </div>
+            h1 {
+                font-size: 40px;
+            }
 
-    <div class="hero__overlay"></div>
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+</style>
 
-</section>
-
-
-<div class="page__content page__content--{{ page_id }}">
-
-    {{ content }}
-
+<div class="hero text-center">
+    <h1 class="font-horsemen">Thanks for Joining the Rebellion</h1>
+    <p class="text-green font-kufam">
+        We’ve emailed you a receipt. Need more help? <a href="mailto:info@thesalesrebellion.com">Email us</a> or give us a <a href="tel:6152199828">call</a>.
+    </p>
 </div>
+
+{% include '_includes/footer.liquid' %}
