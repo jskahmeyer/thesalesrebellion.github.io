@@ -140,6 +140,7 @@ const createPaymentElement = (checkout) => {
   const buttonTextAmounts = {
     card: `Pay ${full} now`,
     klarna: `Set up 4 payments of ${split} now`,
+    google_pay: `Pay ${full} now`,
   };
 
   const paymentElement = checkout.createPaymentElement({
