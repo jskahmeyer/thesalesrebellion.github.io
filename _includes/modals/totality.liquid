@@ -1,0 +1,291 @@
+<!-- Modal A -->
+<div class="modal fade" id="modalA" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content flex-column align-items-center justify-content-center">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4.16667 2.5H2.5V17.5H17.5V2.5H4.16667ZM15.8333 4.16667V15.8333H4.16667V4.16667H15.8333ZM9.16667 7.5H7.5V5.83333H5.83333V7.5H7.5V9.16667H9.16667V10.8333H7.5V12.5H5.83333V14.1667H7.5V12.5H9.16667V10.8333H10.8333V12.5H12.5V14.1667H14.1667V12.5H12.5V10.8333H10.8333V9.16667H12.5V7.5H14.1667V5.83333H12.5V7.5H10.8333V9.16667H9.16667V7.5Z" fill="#66FFC8"/>
+                      </svg>
+                </span>
+              </button>
+        <img class="logo" src="/img/totality/logo-no-year.webp" alt="Totality">
+        <h2 class="font-horsemen text-center mx-3">Buy Your Tickets Now!</h2>
+        <h3 class="font-kufam text-uppercase text-center mx-3">August 26-28,&nbsp;2025 <span>|</span> Knoxville, TN</h3>
+        <p class="font-kufam text-center">
+            A revolutionary and experiential sales event brought to you by The Sales Rebellion
+        </p>
+        <a href="/totality" class="btn font-kufam">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal B -->
+<div class="modal fade" id="modalB" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content justify-content-center">
+            <div class="modal-content-inner">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4.16667 2.5H2.5V17.5H17.5V2.5H4.16667ZM15.8333 4.16667V15.8333H4.16667V4.16667H15.8333ZM9.16667 7.5H7.5V5.83333H5.83333V7.5H7.5V9.16667H9.16667V10.8333H7.5V12.5H5.83333V14.1667H7.5V12.5H9.16667V10.8333H10.8333V12.5H12.5V14.1667H14.1667V12.5H12.5V10.8333H10.8333V9.16667H12.5V7.5H14.1667V5.83333H12.5V7.5H10.8333V9.16667H9.16667V7.5Z" fill="#66FFC8"/>
+                          </svg>
+                    </span>
+                  </button>
+                  <h2 class="font-horsemen">Don't Forget</h2>
+                  <h3 class="font-kufam text-uppercase text-center">
+                    August 26 - 28 <span>|</span> Knoxville, TN
+                  </h3>
+                  <img class="logo" src="/img/totality/logo.webp" alt="Totality 2025">
+                  <a href="/totality" class="btn font-kufam">Buy Your Tickets Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #modalA, #modalB {
+        .modal-dialog {
+            max-width: 800px;
+            margin-inline: auto;
+        }
+        
+        .modal-content {
+            background-image: url('/img/totality/modal-bg.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0;
+        }
+    
+        button.close {
+            align-self: flex-end;
+            padding: 0;
+            border: none;
+            background: transparent;
+    
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+    
+            &:hover {
+                svg path {
+                    fill: #f0f;
+                }
+            }
+        }
+    }
+
+    #modalA {
+        .modal-content {
+            padding: 16px 16px 40px 16px;
+        }
+        .logo {
+            max-width: 220px;
+            margin-top: 9px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 52px;
+            font-weight: 400;
+            text-wrap: balance;
+            line-height: 2.5;
+        }
+
+        h3 {
+            color: #f0f;
+            text-shadow: 0px 4px 20px rgba(235, 56, 207, 0.50);
+            font-weight: 700;
+            font-size: 1.125rem;
+            letter-spacing: 9px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            text-shadow: 0px 4px 20px rgba(235, 56, 207, 0.50);
+            font-weight: 500;
+            line-height: 125%;
+            letter-spacing: 0.32px;
+            max-width: 395px;
+            margin-bottom: 34px;
+        }
+
+        a.btn {
+            padding: 20px 24px;
+            background-color: #66FFC8;
+            color: #000;
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 13px;
+            border: none;
+            border-radius: 0;
+            letter-spacing: normal;
+            &:hover {
+                background-color: #9cffdb;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+    }
+
+    #modalB {
+        .modal-content {
+            padding: 40px;
+        }
+
+        .modal-content-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #66FFC8;
+            padding: 8px 8px 60px 8px;
+        }
+
+        h2 {
+            margin-top: 31px;
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        h3 {
+            text-shadow: 0px 4px 20px rgba(235, 56, 207, 0.50);
+            font-size: 1.125rem;
+            font-weight: 700;
+            letter-spacing: 9px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            margin-bottom: 73px;
+        }
+
+        a.btn {
+            padding: 20px 24px;
+            background-color: #EB38CF;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 13px;
+            border: none;
+            border-radius: 0;
+            letter-spacing: normal;
+
+            &:hover {
+                background-color: #ff59ff;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+    }
+
+    @media(max-width: 900px) {
+        #modalA, #modalB {
+            .modal-dialog {
+                max-width: calc(100% - 70px);
+            }
+        }
+
+        #modalA {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    @media(max-width: 796px) {
+        #modalA {
+            h3 {
+                text-wrap: balance;
+                max-width: 360px;
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        #modalB {
+            .modal-content {
+                padding: 20px;
+            }
+
+            .modal-content-inner {
+                padding-bottom: 30px;
+            }
+
+            .logo {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @media(max-width: 748px) {
+        #modalB {
+            h3 {
+                text-wrap: balance;
+                max-width: 360px;
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 583px) {
+        #modalA {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        #modalA, #modalB {
+            h3 {
+                font-size: 1rem;
+                letter-spacing: 4px;
+            }
+
+            p {
+                font-size: 0.875rem;
+                max-width: 100%;
+                text-wrap: balance;
+            }
+
+            a.btn {
+                font-size: 1rem;
+                padding: 16px 20px;
+            }
+        }
+    }
+
+    @media(max-width: 408px) {
+        #modalA {
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modalIds = ['#modalA', '#modalB'];
+  const chosen = modalIds[Math.floor(Math.random() * modalIds.length)];
+  const modal = document.querySelector(chosen);
+
+  const today = new Date().toISOString().slice(0, 10);
+  const lastShown = localStorage.getItem('totalityModalLastShown');
+
+  if (lastShown !== today && modal) {
+    const bsModal = new bootstrap.Modal(modal);
+    bsModal.show();
+    localStorage.setItem('totalityModalLastShown', today);
+  }
+});
+</script>
